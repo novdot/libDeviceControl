@@ -66,6 +66,7 @@ public:
      * */
     static QList< QPair<int,QString> > getFormatList();
 
+    QList< QPair<QString,QString> > m_lConsoleCmd; ///< список косольных команд
 public slots:
     /*!
      * \brief timStop остановка таймера

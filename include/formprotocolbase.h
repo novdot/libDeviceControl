@@ -13,6 +13,13 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class FormProtocolBase; }
 QT_END_NAMESPACE
 
+/**
+    \brief Система консольных команд
+*/
+#define CONSOLE_CMD_WINDOW "-console"
+#define CONSOLE_CMD_COM_SETUPS "-com"
+#define CONSOLE_CMD_DEV "-dev"
+
 /*!
     \defgroup ProtocolBase устройства
     \ingroup Dispatcher
