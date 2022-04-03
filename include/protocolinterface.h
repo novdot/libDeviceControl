@@ -109,6 +109,8 @@ public slots:
     */
     QString getCOMName();
 
+    virtual void console(QList< QPair<QString,QString > > commands) = 0;
+
 signals:
     /*!
      * \brief сигнал пакета управления устройством

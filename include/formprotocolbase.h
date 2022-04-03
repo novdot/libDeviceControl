@@ -17,7 +17,8 @@ QT_END_NAMESPACE
     \brief Система консольных команд
 */
 #define CONSOLE_CMD_WINDOW "-console"
-#define CONSOLE_CMD_COM_SETUPS "-com"
+#define CONSOLE_CMD_SETUPS "-setups"
+#define CONSOLE_CMD_COM "-com"
 #define CONSOLE_CMD_DEV "-dev"
 
 /*!
@@ -62,6 +63,7 @@ public slots:
     void updateSlaveControl();
     void timStop();
     void timUpdateEvent();
+    void console(QList< QPair<QString,QString > > commands);
 
 signals:
 

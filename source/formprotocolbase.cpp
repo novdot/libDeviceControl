@@ -228,6 +228,13 @@ void FormProtocolBase::timUpdateEvent()
 
     sendDataToDevice(m_byteArray);
 }
+
+/*****************************************************************************/
+void FormProtocolBase::console(QList< QPair<QString,QString > > commands)
+{
+    (commands);
+}
+
 /*****************************************************************************/
 void FormProtocolBase::showRobotView()
 {
