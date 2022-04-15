@@ -17,6 +17,11 @@
 */
 ///@{
 
+///Форматы чтения данных с утройства
+typedef enum device_rcModeDef{
+    _interface_manual_rc = 0
+    ,_interface_signal_rc
+}device_rcMode;
 
 ///Форматы информации
 typedef enum device_formatDef{
@@ -40,6 +45,8 @@ typedef struct device_robotDef {
     device_robot_src slave;  ///< элемент раб
     device_robot_src master;  ///< элемент мастер
 }device_robot;
+
+//typedef QByteArray (*rc_handler)(void);
 
 /*!
     \brief
@@ -67,6 +74,7 @@ public:
     static QList< QPair<int,QString> > getFormatList();
 
     QList< QPair<QString,QString> > m_lConsoleCmd; ///< список косольных команд
+    void* m_pHardware;
 public slots:
     /*!
      * \brief timStop остановка таймера
@@ -131,6 +139,8 @@ signals:
      * \brief Отправка в лог информации
      */
     void add2Log(QString);
+
+    void setRcMode(device_rcMode);
 private:
 protected:
     QString m_strCOMName; ///< имя устройства
@@ -138,6 +148,7 @@ protected:
     QList<device_robot> m_lRobotSlave;///< подсписки событий. Содержатся только события для слейва - быстрые команды на выдачу
     QList< QPair<int,QString> > m_lFormat; ///< списки возможных значений: формат входных/выходных данных   
     QTimer *tim; ///< таймер для периодической отправки
+    //rc_handler m_rcHandler;
 };
 
 ///@}

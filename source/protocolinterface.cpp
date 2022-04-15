@@ -2,10 +2,14 @@
 
 DeviceInterface::DeviceInterface(QWidget *parent)
 {
+    //m_rcHandler = 0;
     m_lFormat = DeviceInterface::getFormatList();
 
     tim = new QTimer();
     connect(tim,SIGNAL(timeout()),SLOT(timUpdateEvent()));
+
+    emit setRcMode(_interface_signal_rc);
+    m_pHardware = 0;
 }
 
 /*******************************************************************/

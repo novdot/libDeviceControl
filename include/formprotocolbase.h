@@ -21,6 +21,7 @@ QT_END_NAMESPACE
 #define CONSOLE_CMD_COM "-com"
 #define CONSOLE_CMD_DEV "-dev"
 
+
 /*!
     \defgroup ProtocolBase устройства
     \ingroup Dispatcher
@@ -76,6 +77,7 @@ private:
     QListWidget m_lSlaveView; //< список событий для робота - список команд
 
     QMessageBox* m_pErrMsg;
+
 
 private slots:
     /*!
