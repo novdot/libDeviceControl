@@ -48,13 +48,18 @@ FormProtocolBase::FormProtocolBase(QWidget *parent)
     connect(&m_lSlaveView ,SIGNAL(itemClicked(QListWidgetItem *))
                 , this, SLOT(doSlaveControl(QListWidgetItem *)));
 
+
 }
 
 FormProtocolBase::~FormProtocolBase()
 {
     delete m_pui;
 }
-
+/*****************************************************************************/
+void FormProtocolBase::runSetups()
+{
+    emit setRcMode(_interface_signal_rc);
+}
 /*****************************************************************************/
 void FormProtocolBase::receiveDataFromDevice(QByteArray a_data)
 {

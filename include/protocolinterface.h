@@ -73,6 +73,8 @@ public:
      * */
     static QList< QPair<int,QString> > getFormatList();
 
+    virtual void runSetups() = 0;
+
     QList< QPair<QString,QString> > m_lConsoleCmd; ///< список косольных команд
     void* m_pHardware;
 public slots:

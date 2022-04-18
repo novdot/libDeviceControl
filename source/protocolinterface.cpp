@@ -8,7 +8,6 @@ DeviceInterface::DeviceInterface(QWidget *parent)
     tim = new QTimer();
     connect(tim,SIGNAL(timeout()),SLOT(timUpdateEvent()));
 
-    emit setRcMode(_interface_signal_rc);
     m_pHardware = 0;
 }
 
