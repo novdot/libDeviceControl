@@ -73,6 +73,9 @@ public:
      * */
     static QList< QPair<int,QString> > getFormatList();
 
+    /*!
+        \brief запускает настройки для обработки данных io от device до hardware
+     * */
     virtual void runSetups() = 0;
 
     QList< QPair<QString,QString> > m_lConsoleCmd; ///< список косольных команд
