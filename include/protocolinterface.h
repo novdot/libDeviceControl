@@ -58,7 +58,7 @@ class DeviceInterface : public QWidget
 {
     Q_OBJECT
 public:
-    DeviceInterface(QWidget *parent = nullptr);
+    DeviceInterface(QWidget *parent = 0);
     /*!
         \brief получение текущего списка условий для робота
      * */

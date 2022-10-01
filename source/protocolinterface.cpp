@@ -30,7 +30,7 @@ void DeviceInterface::setRobotList(QList<device_robot> list){
     m_lRobotSlave.clear();
 
     for(QList<device_robot>::ConstIterator i = begin; i != end; ++i){
-        if( ((*i).master.device != nullptr) ) continue;
+        if( ((*i).master.device != 0) ) continue;
         m_lRobotSlave.append((*i));
     }
     updateSlaveControl();

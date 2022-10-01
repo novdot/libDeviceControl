@@ -40,7 +40,7 @@ class FormProtocolBase : public DeviceInterface
 {
     Q_OBJECT
 public:
-    FormProtocolBase(QWidget *parent = nullptr);
+    FormProtocolBase(QWidget *parent = 0);
     ~FormProtocolBase();
     /*!
      * \brief convertStr2ByteArray перевод строки в QByteArray
