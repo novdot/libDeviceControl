@@ -77,12 +77,20 @@ public:
         \brief запускает настройки для обработки данных io от device до hardware
      * */
     virtual void runSetups() = 0;
+    /*!
+     * \brief получить версию
+     */
+    virtual QString getVersion() = 0;
+    /*!
+     * \brief получить текущее имя устройства
+    */
+    QString getCOMName();
 
-    QList< QPair<QString,QString> > m_lConsoleCmd; ///< список косольных команд
+    QList< QPair<QString,QString> > m_lConsoleCmd; ///< список консольных команд
     void* m_pHardware;
 public slots:
     /*!
-     * \brief timStop остановка таймера
+     * \brief timStart запуск таймера
      */
     virtual void timStart(int period);
     /*!
@@ -117,10 +125,7 @@ public slots:
      * \brief слот для сброса имени устройства в случае отключения устройства
     */
     void itemDisconnect(void * a_pitem);
-    /*!
-     * \brief получить текущее имя устройства
-    */
-    QString getCOMName();
+
 
     virtual void console(QList< QPair<QString,QString > > commands) = 0;
 

@@ -55,6 +55,10 @@ FormProtocolBase::~FormProtocolBase()
 {
     delete m_pui;
 }
+QString FormProtocolBase::getVersion()
+{
+    return "0.1";
+}
 /*****************************************************************************/
 void FormProtocolBase::runSetups()
 {

@@ -58,6 +58,8 @@ public:
     static QString convertByteArray2Str(int nFormatInd,QByteArray data);
 
     virtual void runSetups();
+    virtual QString getVersion();
+
 public slots:
     void receiveDataFromDevice(QByteArray a_data);
     void sendDataToDevice(QByteArray a_data);
